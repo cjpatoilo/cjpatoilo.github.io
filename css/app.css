@@ -1,0 +1,76 @@
+*,
+*:after,
+*:before {
+	box-sizing: border-box }
+
+body {
+	position: relative;
+	display: block;
+	background: #fdfdfd;
+	line-height: 1.7;
+	color: #444;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-size: 16px;
+	text-align: center }
+
+.container {
+	position: fixed;
+	left: 50%;
+	width: 80%;
+	display: block;
+	text-align: center;
+	z-index: 0 }
+
+.header {
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%) }
+
+.title {
+	color: #777;
+	font-style: italic;
+	font-size: 44px;
+	font-weight: normal;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	margin-top: 0 }
+
+.description {
+	max-width: 582px;
+	margin: -25px auto 40px }
+
+.link:hover {
+	text-decoration: none }
+
+.footer {
+	bottom: 0;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%) }
+
+.brands {
+	display: block;
+	padding: 0;
+	text-align: center }
+
+.brands .brand {
+	display: inline-block;
+	padding: 5px 20px }
+
+.brands .link {
+	color: #444;
+	font-size: 20px;
+	text-decoration: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale }
+
+.brands .link:hover {
+	opacity: .3 }
+
+.brands .link.fa-medium,
+.brands .link.fa-envelope {
+	font-size: 18px;
+}
+
+.disable-hover,
+.disable-hover * {
+	pointer-events: none !important }
