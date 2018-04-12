@@ -1,3 +1,8 @@
+root {
+	--color-black: #222;
+	--color-white: #fdfdfd;
+}
+
 *,
 *:after,
 *:before {
@@ -6,71 +11,77 @@
 body {
 	position: relative;
 	display: block;
-	background: #fdfdfd;
-	line-height: 1.7;
-	color: #444;
-	font-family: 'Helvetica Neue', Arial, sans-serif;
-	font-size: 16px;
+	background: var(--color-white);
+	line-height: 1.6;
+	color: var(--color-black);
+	font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+	font-weight: 300;
+	font-size: 18px;
 	text-align: center }
 
-.container {
+a:active,
+a:focus {
+	color: var(--color-balck);
+}
+
+.container__footer,
+.container__header {
 	position: fixed;
+	bottom: 0;
 	left: 50%;
-	width: 80%;
+	width: 82.5%;
 	display: block;
 	text-align: center;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%)
 	z-index: 0 }
 
-.header {
+.container__header {
+	bottom: auto;
 	top: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%) }
 
-.title {
-	color: #777;
-	font-style: italic;
-	font-size: 44px;
+.header__title {
+	color: var(--color-black);
+	text-transform: uppercase;
+	font-size: 48px;
 	font-weight: normal;
-	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-family: 'Oswald', sans-serif;
 	margin-top: 0 }
 
-.description {
-	max-width: 582px;
-	margin: -25px auto 40px }
+.header__description {
+	letter-spacing: 1.4px;
+	margin: -20px auto 40px }
 
-.link:hover {
+.header__link:hover {
 	text-decoration: none }
 
-.footer {
-	bottom: 0;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%) }
-
-.brands {
+.social__list {
 	display: block;
 	padding: 0;
 	text-align: center }
 
-.brands .brand {
+.social__list .social__item {
 	display: inline-block;
 	padding: 5px 20px }
 
-.brands .link {
-	color: #444;
+.social__link {
+	color: #222;
 	font-size: 20px;
 	text-decoration: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale }
 
-.brands .link:hover {
+.social__link:hover {
 	opacity: .3 }
 
-.brands .link.fa-medium,
-.brands .link.fa-envelope {
+.social__link.fa-medium,
+.social__link.fa-envelope {
 	font-size: 18px;
 }
 
 .disable-hover,
 .disable-hover * {
-	pointer-events: none !important }
+	pointer-events: none }
