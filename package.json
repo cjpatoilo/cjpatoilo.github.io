@@ -1,0 +1,20 @@
+{
+  "name": "cjpatoilo",
+  "version": "0.0.0",
+  "description": "Life Hacker based in Brazil. Engineer of things. Creator of Milligram and Airform.",
+  "homepage": "https://cjpatoilo.com",
+  "repository": "cjpatoilo/cjpatoilo.github.io",
+  "license": "MIT",
+  "author": "CJ Patoilo <cjpatoilo@gmail.com>",
+  "private": "true",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "scripts": {
+    "deploy": "rm -rf dist && cp -rf src dist && mv dist/index.html dist/200.html && surge -d cjpatoilo.com -p dist"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "surge": "^0.19.0"
+  }
+}
