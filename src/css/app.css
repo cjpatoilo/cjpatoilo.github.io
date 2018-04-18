@@ -19,6 +19,7 @@ body {
 	font-size: 18px;
 	text-align: center }
 
+a,
 a:active,
 a:focus {
 	color: var(--color-balck);
