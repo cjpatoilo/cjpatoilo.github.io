@@ -465,9 +465,11 @@ var App = function App() {
 exports.default = (0, _reactHotLoader.hot)(module)(App);
 
 if (typeof document !== 'undefined') {
-    _reactGa2.default.initialize('UA-24389952-13');
-    _reactGa2.default.pageview(window.location.pathname);
-    _ravenJs2.default.config('https://f99ae607fb73442c8f006342191d6204@sentry.io/1234637').install();
+    if (true) {
+        _reactGa2.default.initialize(undefined);
+        _reactGa2.default.pageview(window.location.pathname);
+        _ravenJs2.default.config(undefined).install();
+    }
     if ('serviceWorker' in navigator && window.location.protocol === 'https:') navigator.serviceWorker.register('/service-worker.js');else console.info('[Offline] Don\'t support service work!');
     _googleFonts2.default.add({
         'Roboto': 400,
@@ -547,7 +549,7 @@ var universalOptions = {
 };
 var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
     id: '../src/containers/Home',
-    file: '/home/travis/build/cjpatoilo/cjpatoilo.github.io/dist/react-static-routes.js',
+    file: '/Users/cjpatoilo/Www/patoilo.com/cjpatoilo.com/www/dist/react-static-routes.js',
     load: function load() {
         return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 6)), (0, _importCss3.default)('src/containers/Home', {
             disableWarnings: true
@@ -567,7 +569,7 @@ var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
     id: '../src/containers/404',
-    file: '/home/travis/build/cjpatoilo/cjpatoilo.github.io/dist/react-static-routes.js',
+    file: '/Users/cjpatoilo/Www/patoilo.com/cjpatoilo.com/www/dist/react-static-routes.js',
     load: function load() {
         return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 7)), (0, _importCss3.default)('src/containers/404', {
             disableWarnings: true
@@ -1553,4 +1555,4 @@ exports.push([module.i, "*,:after,:before{-webkit-box-sizing:border-box;box-sizi
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.b65a7ddd.js.map
+//# sourceMappingURL=static.22b8707b.js.map
