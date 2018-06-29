@@ -1,17 +1,18 @@
 {
   "name": "cjpatoilo",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Life Hacker based in Brazil. Engineer of things. Creator of Milligram and Airform.",
   "homepage": "https://cjpatoilo.com",
   "repository": "cjpatoilo/cjpatoilo.github.io",
   "license": "MIT",
   "author": "CJ Patoilo <cjpatoilo@gmail.com>",
-  "private": "true",
+  "private": true,
   "engines": {
     "node": ">=4.0.0"
   },
   "scripts": {
-    "deploy": "rimraf dist && npm run build && cname dist && sw-precache --verbose --config sw-precache.config.js && gh-pages -d dist -b master",
+    "deploy:staging": "rimraf dist && npm run build && sw-precache --verbose --config sw-precache.config.js && surge -p dist -d staging.cjpatoilo.com",
+    "deploy:production": "rimraf dist && npm run build && cname dist && sw-precache --verbose --config sw-precache.config.js && gh-pages -d dist -b master",
     "start": "react-static start",
     "stage": "react-static build --staging",
     "build": "react-static build",
@@ -21,7 +22,7 @@
     "font-awesome": "^4.7.0",
     "google-fonts": "^1.0.0",
     "normalize.css": "^8.0.0",
-    "opbeat-react": "^3.4.0",
+    "raven-js": "^3.26.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-ga": "^2.4.1",
@@ -41,6 +42,7 @@
     "gh-pages": "^1.1.0",
     "rimraf": "^2.6.2",
     "serve": "^6.5.3",
+    "surge": "^0.20.1",
     "sw-precache": "^5.2.1",
     "ts-loader": "^3.5.0",
     "typescript": "^2.7.2"

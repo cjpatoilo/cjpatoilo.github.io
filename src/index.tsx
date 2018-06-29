@@ -1,23 +1,30 @@
 import React from 'react'
+import { Router } from 'react-static'
+import { hot } from 'react-hot-loader'
+import Routes from 'react-static-routes'
 import ReactDOM from 'react-dom'
 import GoogleFonts from 'google-fonts'
+import Raven from 'raven-js'
 import ReactGA from 'react-ga'
-import initOpbeat from 'opbeat-react'
 import 'font-awesome/css/font-awesome.css'
 import 'normalize.css'
+import './index.css'
 
-import App from './components/App'
+const App = () => (
+  <Router>
+    <div>
+    	<Routes />
+    </div>
+  </Router>
+)
 
-export default App
+export default hot(module)(App)
 
 if (typeof document !== 'undefined') {
   ReactGA.initialize('UA-24389952-13')
   ReactGA.pageview(window.location.pathname)
 
-  initOpbeat({
-    orgId: 'bfc2d2b1867d4ade86c9030c6985cfa2',
-    appId: '39e235ed58'
-  })
+  Raven.config('https://f99ae607fb73442c8f006342191d6204@sentry.io/1234637').install()
 
   if ('serviceWorker' in navigator && window.location.protocol === 'https:') navigator.serviceWorker.register('/service-worker.js')
   else console.info(`[Offline] Don't support service work!`)
@@ -27,10 +34,6 @@ if (typeof document !== 'undefined') {
     'Oswald': 600
   })
 
-  const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate || ReactDOM.render
-  const render = Comp => {
-    renderMethod(<Comp />, document.getElementById('root'))
-  }
-
-  render(App)
+  const render = module.hot ? ReactDOM.render : ReactDOM.hydrate || ReactDOM.render
+  render(<App />, document.getElementById('root'))
 }

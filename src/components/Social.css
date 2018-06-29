@@ -1,0 +1,42 @@
+.Social {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 82.5%;
+  display: block;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.Social__list {
+  display: block;
+  padding: 0;
+}
+
+.Social__list .Social__item {
+  display: inline-block;
+  padding: 5px 20px;
+}
+
+.Social__link {
+  text-decoration: none;
+}
+
+.Social__link:hover {
+  opacity: .3;
+}
+
+.Social__link:before {
+  font-size: 20px;
+}
+
+.Social__link.fa-medium:before,
+.Social__link.fa-envelope:before {
+  font-size: 18px;
+}
+
+@media (min-width: 960px) {
+  .Social {
+  }
+}
+

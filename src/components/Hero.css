@@ -1,0 +1,30 @@
+.Hero {
+  position: absolute;
+  left: 50%;
+  width: 82.5%;
+  display: block;
+  z-index: 0;
+  bottom: auto;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Hero__title {
+  color: #222;
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: normal;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: normal;
+  margin-top: 0;
+}
+
+.Hero__description {
+  margin: -20px auto 40px;
+}
+
+@media (min-width: 960px) {
+  .Hero {
+  }
+}
+
