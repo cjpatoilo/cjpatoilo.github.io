@@ -11,8 +11,8 @@
     "node": ">=4.0.0"
   },
   "scripts": {
-    "staging": "rimraf dist && npm run build && cname dist && sw-precache --verbose --config sw-precache.config.js && surge -p dist -d https://cjpatoilo.surge.sh",
-    "deploy": "rimraf dist && npm run build && cname dist && sw-precache --verbose --config sw-precache.config.js && gh-pages -d dist -b master",
+    "deploy:staging": "rimraf dist && npm run build && sw-precache --verbose --config sw-precache.config.js && surge -p dist -d staging.cjpatoilo.com",
+    "deploy:production": "rimraf dist && npm run build && cname dist && sw-precache --verbose --config sw-precache.config.js && gh-pages -d dist -b master",
     "start": "react-static start",
     "stage": "react-static build --staging",
     "build": "react-static build",
