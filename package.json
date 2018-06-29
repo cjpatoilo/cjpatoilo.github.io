@@ -8,7 +8,7 @@
   "author": "CJ Patoilo <cjpatoilo@gmail.com>",
   "private": true,
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=8.0.0"
   },
   "scripts": {
     "deploy:staging": "rimraf dist && npm run build && sw-precache --verbose --config sw-precache.config.js && surge -p dist -d staging.cjpatoilo.com",
