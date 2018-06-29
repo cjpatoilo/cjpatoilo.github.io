@@ -1,15 +1,15 @@
-<a align="center" href="https://cjpatoilo.com"><img width="100%" src="https://i.imgur.com/MGf9ylq.png" alt="CJ Patoilo - Life Hacker based in Brazil. Engineer of things. Creator of Milligram and Airform. A lot."></a>
+<a align="center" href="https://cjpatoilo.com"><img width="100%" src="https://i.imgur.com/MGf9ylq.png" alt="CJ Patoilo - Life Hacker based in Brazil. Engineer of things. Creator of Milligram and Airform."></a>
 
-> Life Hacker based in Brazil. Engineer of things. Creator of Milligram and Airform. A lot.
+> Life Hacker based in Brazil. Engineer of things. Creator of [Milligram](https://milligram.io) and [Airform](https://airform.io).
 
 
-## Follow me
+## Keep in touch
 
 - [Github](https://github.com/cjpatoilo)
 - [Twitter](https://twitter.com/cjpatoilo)
 - [LinkedIn](https://linkedin.com/in/cjpatoilo)
 - [Medium](https://medium.com/@cjpatoilo)
-- [Instagram](https://instagram.com/cjpatoilo)
+- [Email](mailto:cjpatoilo@gmail.com)
 
 
 ## License
