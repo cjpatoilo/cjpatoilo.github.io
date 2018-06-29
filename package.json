@@ -13,8 +13,7 @@
   "scripts": {
     "deploy:staging": "rimraf dist && react-static build --staging && sw-precache --verbose --config sw-precache.config.js && surge -p dist -d staging.cjpatoilo.com",
     "deploy:production": "rimraf dist && react-static build && cname dist && sw-precache --verbose --config sw-precache.config.js && gh-pages -d dist -b master",
-    "start": "react-static start",
-    "serve": "serve dist -p 3000"
+    "start": "react-static start"
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
@@ -39,7 +38,6 @@
     "eslint-config-react-tools": "^1.2.5",
     "gh-pages": "^1.1.0",
     "rimraf": "^2.6.2",
-    "serve": "^9.1.0",
     "surge": "^0.20.1",
     "sw-precache": "^5.2.1",
     "ts-loader": "^3.5.0",
