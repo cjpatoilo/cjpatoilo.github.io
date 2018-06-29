@@ -5,6 +5,7 @@
 /coverage
 
 # production
+.env
 /dist
 /tmp
 
