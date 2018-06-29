@@ -21,10 +21,11 @@ const App = () => (
 export default hot(module)(App)
 
 if (typeof document !== 'undefined') {
-  ReactGA.initialize('UA-24389952-13')
-  ReactGA.pageview(window.location.pathname)
-
-  Raven.config('https://f99ae607fb73442c8f006342191d6204@sentry.io/1234637').install()
+  if (process.env.NODE_ENV !== 'development') {
+    ReactGA.initialize(process.env.GOOGLE_ANALITYCS_KEY)
+    ReactGA.pageview(window.location.pathname)
+    Raven.config(process.env.SENTRY_KEY).install()
+  }
 
   if ('serviceWorker' in navigator && window.location.protocol === 'https:') navigator.serviceWorker.register('/service-worker.js')
   else console.info(`[Offline] Don't support service work!`)
