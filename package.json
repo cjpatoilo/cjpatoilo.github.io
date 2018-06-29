@@ -11,6 +11,7 @@
     "node": ">=8.0.0"
   },
   "scripts": {
+    "build": "rimraf dist && react-static build && cname dist && sw-precache --verbose --config sw-precache.config.js",
     "deploy:staging": "rimraf dist && react-static build --staging && sw-precache --verbose --config sw-precache.config.js && surge -p dist -d staging.cjpatoilo.com",
     "deploy:production": "rimraf dist && react-static build && cname dist && sw-precache --verbose --config sw-precache.config.js && gh-pages -d dist -b master",
     "start": "react-static start"
