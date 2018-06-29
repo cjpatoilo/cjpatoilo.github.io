@@ -1,6 +1,9 @@
 import path from 'path'
 import React, { Component } from 'react'
 import typescriptWebpackPaths from './webpack.config.js'
+import autoprefixer from 'autoprefixer'
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import postcssFlexbugsFixes from 'postcss-flexbugs-fixes'
 
 export default {
   entry: path.join(__dirname, 'src', 'index.tsx'),
@@ -19,7 +22,52 @@ export default {
       }
     ]
   },
-  webpack: (config, { defaultLoaders }) => {
+  webpack: (config, { stage, defaultLoaders }) => {
+    let loaders = [
+      {
+        loader: 'css-loader',
+        options: {
+          minimize: stage !== 'dev',
+          sourceMap: stage === 'dev',
+          importLoaders: 1,
+        },
+      },
+      {
+        loader: 'postcss-loader',
+        options: {
+          sourceMap: true,
+          ident: 'postcss',
+          plugins: () => [
+            postcssFlexbugsFixes,
+            autoprefixer({
+              browsers: [
+                '>1%',
+                'last 4 versions',
+                'Firefox ESR',
+                'not ie < 9',
+              ],
+              flexbox: 'no-2009',
+            }),
+          ],
+        },
+      },
+    ]
+
+    if (stage === 'dev') {
+      loaders = ['style-loader'].concat(loaders)
+    } else if (stage === 'prod') {
+      loaders = ExtractTextPlugin.extract({
+        fallback: {
+          loader: 'style-loader',
+          options: {
+            sourceMap: false,
+            hmr: false,
+          },
+        },
+        use: loaders,
+      })
+    }
+
     config.resolve.extensions.push('.ts', '.tsx')
     config.resolve.alias = typescriptWebpackPaths.resolve.alias
     config.module.rules = [
@@ -39,6 +87,10 @@ export default {
                 }
               }
             ]
+          },
+          {
+            test: /\.css$/,
+            use: loaders,
           },
           defaultLoaders.cssLoader,
           defaultLoaders.fileLoader
