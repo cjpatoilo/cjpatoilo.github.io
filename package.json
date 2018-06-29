@@ -22,6 +22,7 @@
     "font-awesome": "^4.7.0",
     "google-fonts": "^1.0.0",
     "normalize.css": "^8.0.0",
+    "raven-js": "^3.26.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-ga": "^2.4.1",
