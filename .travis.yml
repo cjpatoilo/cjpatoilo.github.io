@@ -18,4 +18,8 @@ deploy:
   local_dir: dist
   target_branch: master
   on:
-    tag: true
+    tags: true
+
+notifications:
+  email: false
+  slack: $SLACK_TOKEN#cjpatoilogithubio
