@@ -19,3 +19,7 @@ deploy:
   target_branch: master
   on:
     tag: true
+
+notifications:
+  email: false
+  slack: $SLACK_TOKEN#cjpatoilogithubio
