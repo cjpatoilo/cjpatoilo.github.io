@@ -465,10 +465,10 @@ var App = function App() {
 exports.default = (0, _reactHotLoader.hot)(module)(App);
 
 if (typeof document !== 'undefined') {
-    if (true) {
-        _reactGa2.default.initialize(undefined);
+    if ((process && process.env && "production" || 'production') !== 'development') {
+        _reactGa2.default.initialize(process && process.env && process.env.GOOGLE_ANALITYCS_KEY || 'UA-24389952-13');
         _reactGa2.default.pageview(window.location.pathname);
-        _ravenJs2.default.config(undefined).install();
+        _ravenJs2.default.config(process && process.env && process.env.SENTRY_KEY || 'https://f99ae607fb73442c8f006342191d6204@sentry.io/1234637').install();
     }
     if ('serviceWorker' in navigator && window.location.protocol === 'https:') navigator.serviceWorker.register('/service-worker.js');else console.info('[Offline] Don\'t support service work!');
     _googleFonts2.default.add({
@@ -1555,4 +1555,4 @@ exports.push([module.i, "*,:after,:before{-webkit-box-sizing:border-box;box-sizi
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.22b8707b.js.map
+//# sourceMappingURL=static.7b8fddcb.js.map
