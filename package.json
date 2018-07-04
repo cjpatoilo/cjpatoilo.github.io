@@ -55,10 +55,5 @@
     "sw-precache": "^5.2.1",
     "ts-loader": "^3.5.0",
     "typescript": "^2.7.2"
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "all"
   }
 }
