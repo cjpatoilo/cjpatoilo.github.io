@@ -9,11 +9,11 @@ import socials from '../databases/socials'
 
 export default withSiteData((): JSX.Element => (
   <div>
-    <Section modifier="hero">
+    <Section modifier='hero'>
       <Hero />
       <Social list={socials} />
     </Section>
-    <Section modifier="disclaimer">
+    <Section modifier='disclaimer'>
       <About />
     </Section>
   </div>

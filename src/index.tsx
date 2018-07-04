@@ -13,7 +13,7 @@ import './index.css'
 const App = () => (
   <Router>
     <div>
-    	<Routes />
+      <Routes />
     </div>
   </Router>
 )
@@ -27,14 +27,17 @@ if (typeof document !== 'undefined') {
     Raven.config(process.env.SENTRY_KEY).install()
   }
 
-  if ('serviceWorker' in navigator && window.location.protocol === 'https:') navigator.serviceWorker.register('/service-worker.js')
-  else console.info(`[Offline] Don't support service work!`)
+  if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
+    navigator.serviceWorker.register('/service-worker.js')
+  } else console.info(`[Offline] Don't support service work!`)
 
   GoogleFonts.add({
-    'Roboto': 400,
-    'Oswald': 600
+    Roboto: 400,
+    Oswald: 600
   })
 
-  const render = module.hot ? ReactDOM.render : ReactDOM.hydrate || ReactDOM.render
+  const render = module.hot
+    ? ReactDOM.render
+    : ReactDOM.hydrate || ReactDOM.render
   render(<App />, document.getElementById('root'))
 }

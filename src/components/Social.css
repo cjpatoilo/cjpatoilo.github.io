@@ -23,7 +23,7 @@
 }
 
 .Social__link:hover {
-  opacity: .3;
+  opacity: 0.3;
 }
 
 .Social__link:before {
@@ -39,4 +39,3 @@
   .Social {
   }
 }
-
