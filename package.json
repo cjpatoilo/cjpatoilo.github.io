@@ -1,6 +1,6 @@
 {
   "name": "cjpatoilo.github.io",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Life Hacker based in Brazil. Engineer of things. Creator of Milligram and Airform.",
   "homepage": "https://cjpatoilo.com",
   "repository": "cjpatoilo/cjpatoilo.github.io",
@@ -55,10 +55,5 @@
     "sw-precache": "^5.2.1",
     "ts-loader": "^3.5.0",
     "typescript": "^2.7.2"
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "all"
   }
 }
