@@ -51,7 +51,7 @@
     "lint-staged": "7.3.0",
     "prettier-standard": "8.0.1",
     "rimraf": "2.7.1",
-    "surge": "0.20.5",
+    "surge": "0.21.3",
     "sw-precache": "5.2.1",
     "ts-loader": "3.5.0",
     "typescript": "2.9.2"
