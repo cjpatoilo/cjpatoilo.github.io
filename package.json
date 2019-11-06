@@ -54,6 +54,6 @@
     "surge": "0.21.3",
     "sw-precache": "5.2.1",
     "ts-loader": "3.5.0",
-    "typescript": "2.9.2"
+    "typescript": "3.7.2"
   }
 }
