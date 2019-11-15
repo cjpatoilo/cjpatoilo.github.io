@@ -30,8 +30,8 @@
     "google-fonts": "1.0.0",
     "normalize.css": "8.0.1",
     "raven-js": "3.27.2",
-    "react": "16.11.0",
-    "react-dom": "16.11.0",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
     "react-ga": "2.7.0",
     "react-router": "4.3.1",
     "react-static": "5.9.12"
