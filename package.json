@@ -48,7 +48,7 @@
     "eslint-config-react-tools": "2.0.5",
     "gh-pages": "2.1.1",
     "husky": "3.1.0",
-    "lint-staged": "9.4.3",
+    "lint-staged": "9.5.0",
     "prettier-standard": "16.0.0",
     "rimraf": "3.0.0",
     "surge": "0.21.3",
