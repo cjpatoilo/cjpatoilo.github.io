@@ -37,7 +37,7 @@
     "react-static": "5.9.12"
   },
   "devDependencies": {
-    "@types/node": "10.17.7",
+    "@types/node": "10.17.9",
     "@types/react": "16.9.13",
     "@types/react-dom": "16.9.3",
     "@types/react-hot-loader": "4.1.0",
