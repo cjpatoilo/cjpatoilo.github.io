@@ -34,7 +34,7 @@
     "react-dom": "16.13.1",
     "react-ga": "2.7.0",
     "react-router": "5.1.2",
-    "react-static": "7.2.3"
+    "react-static": "7.3.0"
   },
   "devDependencies": {
     "@types/node": "10.17.21",
