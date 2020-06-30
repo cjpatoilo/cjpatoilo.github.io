@@ -1,15 +1,18 @@
 import React from 'react'
+import Styled from 'styled-components/macro'
 
-import './Section.css'
+type PropsType = {
+  children: any
+  color?: string
+}
 
-export default ({
-  children,
-  modifier
-}: {
-children: any
-modifier?: string
-}): JSX.Element => (
-  <section className={modifier ? `Section--${modifier}` : 'Section'}>
-    {children}
-  </section>
+const Section = Styled.section`
+  background: ${props => props?.color ?? 'transparent'};
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+`
+
+export default ({ children, color = '' }: PropsType): JSX.Element => (
+  <Section color={color}>{children}</Section>
 )
