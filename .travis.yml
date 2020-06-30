@@ -1,11 +1,14 @@
 language: node_js
 
 node_js:
-  - stable
+  - 12
+
+before_install:
+  - npm i -g npm
 
 cache:
   directories:
-  - node_modules
+    - node_modules
 
 before_deploy:
   - npm run build

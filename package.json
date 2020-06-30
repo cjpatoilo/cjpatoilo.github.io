@@ -1,59 +1,85 @@
 {
   "name": "cjpatoilo.github.io",
-  "version": "0.4.1",
+  "version": "1.0.0",
   "description": "Life Hacker based in Brazil. Engineer of things. Creator of Milligram and Airform.",
   "homepage": "https://cjpatoilo.com",
   "repository": "cjpatoilo/cjpatoilo.github.io",
   "license": "MIT",
   "author": "CJ Patoilo <cjpatoilo@gmail.com>",
   "private": true,
-  "engines": {
-    "node": ">=8.0.0"
-  },
-  "scripts": {
-    "build": "rimraf dist && react-static build && sw-precache --verbose --config sw-precache.config.js",
-    "deploy:production": "NODE_ENV=production npm run build && gh-pages -d dist -b master",
-    "deploy:staging": "NODE_ENV=staging npm run build && surge -p dist -d staging.cjpatoilo.com",
-    "precommit": "lint-staged",
-    "start": "react-static start"
-  },
-  "lint-staged": {
-    "linters": {
-      "src/**/*": [
-        "prettier-standard",
-        "git add"
-      ]
-    }
-  },
   "dependencies": {
-    "font-awesome": "4.7.0",
-    "google-fonts": "1.0.0",
-    "normalize.css": "8.0.1",
-    "raven-js": "3.27.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-ga": "3.0.0",
-    "react-router": "5.2.0",
-    "react-static": "7.4.0"
+    "@sentry/browser": "^5.17.0",
+    "font-awesome": "^4.7.0",
+    "google-fonts": "^1.0.0",
+    "milligram": "^1.4.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-ga": "^3.0.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "styled-components": "^5.1.1",
+    "typescript": "^3.9.5"
   },
   "devDependencies": {
-    "@types/node": "10.17.26",
-    "@types/react": "16.9.41",
-    "@types/react-dom": "16.9.8",
-    "@types/react-hot-loader": "4.1.0",
-    "@types/react-router": "5.1.8",
-    "@types/webpack-env": "1.15.2",
-    "babel-plugin-inline-dotenv": "1.5.0",
-    "convert-tsconfig-paths-to-webpack-aliases": "0.9.2",
-    "eslint-config-react-tools": "2.0.5",
-    "gh-pages": "3.1.0",
-    "husky": "4.2.5",
-    "lint-staged": "10.2.11",
-    "prettier-standard": "16.3.0",
-    "rimraf": "3.0.2",
-    "surge": "0.21.3",
-    "sw-precache": "5.2.1",
-    "ts-loader": "7.0.5",
-    "typescript": "3.9.5"
+    "@testing-library/jest-dom": "^5.10.1",
+    "@testing-library/react": "^10.3.0",
+    "@testing-library/user-event": "^12.0.3",
+    "@types/google-fonts": "^1.0.0",
+    "@types/jest": "^26.0.0",
+    "@types/node": "^14.0.13",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-ga": "^2.3.0",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/styled-components": "^5.1.0",
+    "gh-pages": "^3.1.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier-standard": "^16.3.0",
+    "surge": "^0.21.3"
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "deploy:production": "NODE_ENV=production npm run build && gh-pages -d build -b master",
+    "deploy:staging": "NODE_ENV=staging npm run build && surge -p build -d staging.cjpatoilo.com",
+    "lint": "prettier-standard --check",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
+  },
+  "engines": {
+    "node": "^12.18.0",
+    "npm": "^6.14.5"
+  },
+  "prettier": {
+    "jsxSingleQuote": false,
+    "trailingComma": "all"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": [
+      "prettier-standard --format",
+      "git add"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "renovate": {
+    "extends": [
+      "config:base"
+    ]
   }
 }

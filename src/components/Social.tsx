@@ -1,24 +1,80 @@
 import React from 'react'
+import Styled from 'styled-components/macro'
+import Link from '../components/Link'
 
-import Social from '../types/Social'
-import './Social.css'
+const socials = [
+  { className: 'github', name: 'My code', url: 'https://github.com/cjpatoilo' },
+  {
+    className: 'twitter',
+    name: 'My thought',
+    url: 'https://twitter.com/cjpatoilo',
+  },
+  {
+    className: 'linkedin',
+    name: 'My skill',
+    url: 'https://linkedin.com/in/cjpatoilo',
+  },
+  {
+    className: 'medium',
+    name: 'My writing',
+    url: 'https://medium.com/@cjpatoilo',
+  },
+  {
+    className: 'envelope',
+    name: 'My contact',
+    url: 'mailto:cjpatoilo@gmail.com?subject=Hi',
+  },
+  // { className: 'instagram', name: 'My photo', url: 'https://instagram.com/cjpatoilo' },
+  // { className: 'behance', name: 'My design', url: 'https://behance.net/cjpatoilo' },
+]
 
-export default ({ list }: { list: Social[] }): JSX.Element => (
-  <nav className='Social'>
-    <ul className='Social__list'>
-      {list.map(
-        ({ className, url, name }: Social, index: number): JSX.Element => (
-          <li className='Social__item' key={index}>
-            <a
-              className={`Social__link fa fa-${className}`}
+const Social = Styled.nav`
+  bottom: 2.0rem;
+  display: block;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 82.5%;
+  z-index: 0;
+`
+const SocialList = Styled.ul`
+  list-style: none;
+  margin: 0;
+`
+const SocialItem = Styled.li`
+  display: inline-block;
+  margin: 0;
+  padding: .5rem 2.0rem;
+`
+const SocialLink = Styled(Link)`
+  text-decoration: none;
+
+  &:before {
+    font-size: 2.0rem;
+  }
+
+  &.fa-medium,
+  &.fa-envelope {
+    &:before {
+      font-size: 1.8rem;
+    }
+  }
+`
+
+export default (): JSX.Element => (
+  <Social>
+    <SocialList>
+      {socials.map(
+        ({ className, name, url }, index): JSX.Element => (
+          <SocialItem key={index}>
+            <SocialLink
+              className={`fa fa-${className}`.trim()}
               href={url}
               title={name}
-              rel='noopener'
-              target='_blank'
             />
-          </li>
-        )
+          </SocialItem>
+        ),
       )}
-    </ul>
-  </nav>
+    </SocialList>
+  </Social>
 )
