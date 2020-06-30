@@ -34,9 +34,8 @@ const GlobalStyles = createGlobalStyle`
     color: var(--color-secondary);
     display: block;
     font-family: var(--font-primary);
-    font-size: 18px;
     font-weight: var(--font-normal);
-    letter-spacing: 1.4px;
+    letter-spacing: . 14rem;
     line-height: 1.6;
     overflow-x: hidden;
     position: relative;

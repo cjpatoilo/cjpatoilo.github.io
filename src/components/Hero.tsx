@@ -15,7 +15,7 @@ const Hero = Styled.header`
 
 const HeroTitle = Styled.h1`
   color: var(--color-secondary);
-  font-size: 48px;
+  font-size: 4.8rem;
   font-weight: var(--font-normal);
   font-family: var(--font-secondary);
   letter-spacing: normal;
@@ -25,7 +25,8 @@ const HeroTitle = Styled.h1`
 
 const HeroDescription = Styled.blockquote`
   border: 0;
-  margin: -20px auto 40px;
+  font-size: 1.8rem;
+  margin: -2.0rem auto 4.0rem;
 `
 
 export default (): JSX.Element => (

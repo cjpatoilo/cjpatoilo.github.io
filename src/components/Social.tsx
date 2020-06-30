@@ -29,7 +29,7 @@ const socials = [
 ]
 
 const Social = Styled.nav`
-  bottom: 20px;
+  bottom: 2.0rem;
   display: block;
   left: 50%;
   position: absolute;
@@ -44,19 +44,19 @@ const SocialList = Styled.ul`
 const SocialItem = Styled.li`
   display: inline-block;
   margin: 0;
-  padding: 5px 20px;
+  padding: .5rem 2.0rem;
 `
 const SocialLink = Styled(Link)`
   text-decoration: none;
 
   &:before {
-    font-size: 20px;
+    font-size: 2.0rem;
   }
 
   &.fa-medium,
   &.fa-envelope {
     &:before {
-      font-size: 18px;
+      font-size: 1.8rem;
     }
   }
 `
