@@ -6,20 +6,35 @@ import Button from '../components/Button'
 import Dialog from '../components/Dialog'
 
 const Newsletter = Styled.div`
-  bottom: 50%;
-  left: 50%;
+  left: 2.0rem;
+  height: auto;
   max-width: calc(100% - 4.0rem);
   position: absolute;
   text-align: left;
-  transform: translate(-50%, 50%);
+  top: 50%;
+  transform: translateY(-50%);
   width: 100%;
 
-  label {
-    font-weight: var(--font-normal);
-    margin-bottom: 3.5rem;
+  button {
+    margin: 0;
+    position: absolute;
+    right: 0;
   }
 
-  input[type=email] {
+  @media (min-width: 960px) {
+    left: 15.0rem;
+    max-width: 38.5rem;
+  }
+`
+const Form = Styled.form`
+  margin: 0;
+`
+const Label = Styled.label`
+  font-weight: var(--font-normal);
+  margin-bottom: 3.5rem;
+`
+const Input = Styled.input`
+  && {
     border: 0;
     border-bottom: solid .1rem var(--color-secondary);
     border-radius: var(--border-radius);
@@ -34,19 +49,6 @@ const Newsletter = Styled.div`
       border-color: var(--color-tertiary);
     }
   }
-
-  button {
-    margin: 0;
-    position: absolute;
-    right: 0;
-  }
-
-  @media (min-width: 960px) {
-    bottom: 10.0rem;
-    left: 15.0rem;
-    max-width: 38.5rem;
-    transform: translate(0);
-  }
 `
 
 export default (): JSX.Element => {
@@ -54,23 +56,23 @@ export default (): JSX.Element => {
 
   return (
     <Newsletter>
-      <form
+      <Form
         action="https://buttondown.email/api/emails/embed-subscribe/cjpatoilo"
         method="post"
       >
-        <label htmlFor="newsletter">
-        <strong>Monthly diary</strong> of what I have discovered about technology, design, and lifestyle. What these discoveries have made me think and what these thoughts generate from practical ideas.
-        </label>
-        <input
-          name="email"
+        <Label htmlFor="newsletter">
+          <strong>Monthly diary</strong> of what I have discovered about technology, design, and lifestyle. What these discoveries have made me think and what these thoughts generate from practical ideas.
+        </Label>
+        <Input
           id="newsletter"
+          name="email"
           placeholder="Enter your email here"
           required
           type="email"
         />
         <Button>Subscribe</Button>
         {hash === '#newsletter' && <Dialog>Email Registered!</Dialog>}
-      </form>
+      </Form>
     </Newsletter>
   )
 }
