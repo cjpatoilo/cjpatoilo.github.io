@@ -32,6 +32,7 @@
     "@types/react-ga": "^2.3.0",
     "@types/react-router-dom": "^5.1.7",
     "@types/styled-components": "^5.1.7",
+    "cname": "^0.1.1",
     "gh-pages": "^3.1.0",
     "husky": "^4.3.6",
     "lint-staged": "^10.5.3",
@@ -40,7 +41,7 @@
   },
   "scripts": {
     "build": "react-scripts build",
-    "deploy:production": "NODE_ENV=production npm run build && gh-pages -d build -b master",
+    "deploy:production": "NODE_ENV=production npm run build && cname build && gh-pages -d build -b master",
     "deploy:staging": "NODE_ENV=development npm run build && surge -p build -d staging.cjpatoilo.com",
     "dev": "NODE_ENV=development react-scripts start",
     "lint": "prettier-standard --check",
