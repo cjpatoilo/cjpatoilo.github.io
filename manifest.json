@@ -1,18 +1,25 @@
 {
-	"name": "CJ Patoilo",
-	"short_name": "CJ Patoilo",
-	"icons": [{
-		"src": "assets/icons/android-chrome-192x192.png",
-		"type": "image/png",
-		"sizes": "192x192"
-	}, {
-		"src": "assets/icons/android-chrome-512x512.png",
-		"type": "image/png",
-		"sizes": "512x512"
-	}],
-	"theme_color": "#ffffff",
-	"background_color": "#ffffff",
-	"display": "standalone",
-	"orientation": "portrait",
-	"start_url": "/?utm_source=web_app_manifest&utm_medium=web_app_manifest"
+  "short_name": "CJ Patoilo",
+  "name": "CJ Patoilo",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
