@@ -13,6 +13,9 @@ const Section = Styled.section`
   position: relative;
 `
 
-export default ({ children, color = '' }: PropsType): JSX.Element => (
-  <Section color={color}>{children}</Section>
-)
+export default function SectionComponent ({
+  children,
+  color = '',
+}: PropsType): JSX.Element {
+  return <Section color={color}>{children}</Section>
+}

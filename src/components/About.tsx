@@ -23,9 +23,11 @@ const About = Styled.div`
   }
 `
 
-export default (): JSX.Element => (
-  <About>
-    Trying to make a beautiful web, fast, 100% responsive, and accessible for
-    everyone.
-  </About>
-)
+export default function AboutComponent (): JSX.Element {
+  return (
+    <About>
+      Trying to make a beautiful web, fast, 100% responsive, and accessible for
+      everyone.
+    </About>
+  )
+}

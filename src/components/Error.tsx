@@ -10,4 +10,6 @@ const Error = Styled.h1`
   width: 100%;
 `
 
-export default () => <Error>Oh no! We couldn't find that page.</Error>
+export default function ErrorComponent () {
+  return <Error>Oh no! We couldn't find that page.</Error>
+}

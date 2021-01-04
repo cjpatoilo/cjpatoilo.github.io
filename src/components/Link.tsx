@@ -29,13 +29,13 @@ const CustomLink = Styled.a`
   ${defaultStyle}
 `
 
-export default ({
+export default function LinkComponent ({
   children,
   className = '',
   href = '',
   title = '',
-}: PropsType): JSX.Element =>
-  href.includes('http') ?? href.includes('mailto') ? (
+}: PropsType): JSX.Element {
+  return href.includes('http') ?? href.includes('mailto') ? (
     <CustomLink
       className={className}
       href={href}
@@ -50,3 +50,4 @@ export default ({
       {children}
     </ReactRouterLink>
   )
+}

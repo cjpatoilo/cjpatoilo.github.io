@@ -38,6 +38,6 @@ const Dialog = Styled.dialog`
   }
 `
 
-export default ({ children }: PropsType): JSX.Element => (
-  <Dialog>{children}</Dialog>
-)
+export default function DialogComponent ({ children }: PropsType): JSX.Element {
+  return <Dialog>{children}</Dialog>
+}

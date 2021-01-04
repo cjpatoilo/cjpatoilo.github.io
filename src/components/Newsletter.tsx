@@ -51,7 +51,7 @@ const Input = Styled.input`
   }
 `
 
-export default (): JSX.Element => {
+export default function NewsletterComponent (): JSX.Element {
   const { hash } = useLocation()
 
   return (
@@ -61,7 +61,9 @@ export default (): JSX.Element => {
         method="post"
       >
         <Label htmlFor="newsletter">
-          <strong>Monthly diary</strong> of what I have discovered about technology, design, and lifestyle. What these discoveries have made me think and what these thoughts generate from practical ideas.
+          <strong>Monthly diary</strong> of what I have discovered about
+          technology, design, and lifestyle. What these discoveries have made me
+          think and what these thoughts generate from practical ideas.
         </Label>
         <Input
           id="newsletter"

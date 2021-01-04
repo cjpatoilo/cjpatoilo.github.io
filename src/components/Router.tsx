@@ -43,12 +43,14 @@ const GlobalStyles = createGlobalStyle`
   }
 `
 
-export default () => (
-  <BrowserRouter>
-    <GlobalStyles />
-    <Switch>
-      <Route component={HomePage} exact path="/" />
-      <Route component={ErrorPage} />
-    </Switch>
-  </BrowserRouter>
-)
+export default function RouterComponent () {
+  return (
+    <BrowserRouter>
+      <GlobalStyles />
+      <Switch>
+        <Route component={HomePage} exact path="/" />
+        <Route component={ErrorPage} />
+      </Switch>
+    </BrowserRouter>
+  )
+}

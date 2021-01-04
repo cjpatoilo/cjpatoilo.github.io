@@ -61,20 +61,22 @@ const SocialLink = Styled(Link)`
   }
 `
 
-export default (): JSX.Element => (
-  <Social>
-    <SocialList>
-      {socials.map(
-        ({ className, name, url }, index): JSX.Element => (
-          <SocialItem key={index}>
-            <SocialLink
-              className={`fa fa-${className}`.trim()}
-              href={url}
-              title={name}
-            />
-          </SocialItem>
-        ),
-      )}
-    </SocialList>
-  </Social>
-)
+export default function SocialComponent (): JSX.Element {
+  return (
+    <Social>
+      <SocialList>
+        {socials.map(
+          ({ className, name, url }, index): JSX.Element => (
+            <SocialItem key={index}>
+              <SocialLink
+                className={`fa fa-${className}`.trim()}
+                href={url}
+                title={name}
+              />
+            </SocialItem>
+          ),
+        )}
+      </SocialList>
+    </Social>
+  )
+}

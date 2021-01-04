@@ -29,25 +29,27 @@ const HeroDescription = Styled.blockquote`
   margin: -2.0rem auto 4.0rem;
 `
 
-export default (): JSX.Element => (
-  <Hero>
-    <HeroTitle>CJ Patoilo</HeroTitle>
-    <HeroDescription>
-      Life Hacker based in Brazil. Engineer of things. Creator of{' '}
-      <Link
-        href="https://github.com/milligram/milligram"
-        title="Milligram - A minimalist CSS framework."
-      >
-        Milligram
-      </Link>{' '}
-      and{' '}
-      <Link
-        href="https://github.com/airform/airform"
-        title="Airform - Functional HTML forms. Keeping it plane and simple."
-      >
-        Airform
-      </Link>
-      .
-    </HeroDescription>
-  </Hero>
-)
+export default function HeroComponent (): JSX.Element {
+  return (
+    <Hero>
+      <HeroTitle>CJ Patoilo</HeroTitle>
+      <HeroDescription>
+        Life Hacker based in Brazil. Engineer of things. Creator of{' '}
+        <Link
+          href="https://github.com/milligram/milligram"
+          title="Milligram - A minimalist CSS framework."
+        >
+          Milligram
+        </Link>{' '}
+        and{' '}
+        <Link
+          href="https://github.com/airform/airform"
+          title="Airform - Functional HTML forms. Keeping it plane and simple."
+        >
+          Airform
+        </Link>
+        .
+      </HeroDescription>
+    </Hero>
+  )
+}

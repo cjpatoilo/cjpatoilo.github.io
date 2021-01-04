@@ -37,6 +37,9 @@ const Button = Styled.button`
   }
 `
 
-export default ({ children, onClick }: PropsType): JSX.Element => (
-  <Button onClick={onClick}>{children}</Button>
-)
+export default function ButtonComponent ({
+  children,
+  onClick,
+}: PropsType): JSX.Element {
+  return <Button onClick={onClick}>{children}</Button>
+}
